@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Menu from "./pages/Menu";
-import FoodDetails from "./pages/FoodDetails";
+import FoodDetails from "./pages/fooddetails";
 import Saveddishes from "./pages/Saveddishes";
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/Notfound"
 
 import SavedDishesProvider from "./context/saveddishes";
 
