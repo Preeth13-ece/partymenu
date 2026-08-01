@@ -12,14 +12,13 @@ function SignIn() {
   const [showErrorMessage, setShowError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  // Already logged in
   const jwtToken = Cookies.get("jwt_token");
 
   if (jwtToken) {
     return <Navigate to="/" replace />;
   }
 
-  const signinform = async (event) => {
+  const signInForm = async (event) => {
     event.preventDefault();
 
     try {
@@ -38,6 +37,7 @@ function SignIn() {
         setShowError(true);
         setErrorMessage(data.message || "Login failed");
       }
+
     } catch (error) {
       setShowError(true);
       setErrorMessage(error.message || "Something went wrong");
@@ -46,7 +46,9 @@ function SignIn() {
 
   return (
     <div className="signin-container">
+
       <div className="signin-card">
+
         <img
           src="/logo.png"
           alt="logo"
@@ -55,10 +57,16 @@ function SignIn() {
 
         <h1>Party Menu</h1>
 
-        <p>Sign in to explore our delicious menu</p>
+        <p>
+          Sign in to explore our delicious menu
+        </p>
 
-        <form onSubmit={signinform}>
-          <label htmlFor="inputEmail">Email</label>
+
+        <form onSubmit={signInForm}>
+
+          <label htmlFor="inputEmail">
+            Email
+          </label>
 
           <input
             id="inputEmail"
@@ -69,7 +77,10 @@ function SignIn() {
             required
           />
 
-          <label htmlFor="inputPassword">Password</label>
+
+          <label htmlFor="inputPassword">
+            Password
+          </label>
 
           <input
             id="inputPassword"
@@ -80,13 +91,23 @@ function SignIn() {
             required
           />
 
+
           {showErrorMessage && (
-            <p className="error-msg">{errorMessage}</p>
+            <p className="error-msg">
+              {errorMessage}
+            </p>
           )}
 
-          <button type="submit">Sign In</button>
+
+          <button type="submit">
+            Sign In
+          </button>
+
+
         </form>
+
       </div>
+
     </div>
   );
 }
