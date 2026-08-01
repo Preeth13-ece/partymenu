@@ -1,9 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
+import Cookies from "js-cookie";
 import { savedDishesContext } from "../../context/saveddishes";
 
 function Header() {
   const { savedishes } = useContext(savedDishesContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    Cookies.remove("jwt_token");
+    navigate("/login", { replace: true });
+  };
 
   return (
     <div>
@@ -16,9 +23,9 @@ function Header() {
         </button>
       </Link>
 
-      <Link to="/login">
-        <button>Logout</button>
-      </Link>
+      <button onClick={handleLogout}>
+        Logout
+      </button>
     </div>
   );
 }
