@@ -1,0 +1,75 @@
+.saved-page {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  color: white;
+}
+
+.saved-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+.saved-header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.saved-header p {
+  color: #9b9bb0;
+}
+
+.saved-header button {
+  background: transparent;
+  color: #cfcfcf;
+  border: 1px solid #343444;
+  border-radius: 10px;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.remove-btn {
+  width: calc(100% - 30px);
+  margin: 0 15px 18px;
+  padding: 12px;
+  border: 1px solid #d44;
+  background: transparent;
+  color: #ff7b7b;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #d44;
+  color: white;
+}
+
+.empty {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.empty p {
+  color: #9b9bb0;
+  margin-bottom: 20px;
+}
+
+.empty button {
+  background: transparent;
+  color: orange;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.empty button:hover {
+  text-decoration: underline;
+}

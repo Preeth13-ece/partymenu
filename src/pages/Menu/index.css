@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #0f0f12;
+  color: #fff;
+}
+
+.menu-container {
+  width: 92%;
+  margin: 35px auto;
+}
+
+.menu-container h1 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+
+.menu-container > p {
+  color: #9ca3af;
+  margin-bottom: 25px;
+}
+
+/* Filter Box */
+
+#selectiondish {
+  background: #1b1b23;
+  border: 1px solid #2d2d39;
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 35px;
+}
+
+#selectiondish p {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 15px 0 10px;
+  font-weight: 600;
+}
+
+.category-buttons,
+.diet-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.selected,
+.non-selected {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #444;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.selected {
+  background: #ff6b00;
+  color: white;
+  border: none;
+}
+
+.non-selected {
+  background: transparent;
+  color: white;
+}
+
+.non-selected:hover {
+  background: #2c2c35;
+}
+
+/* Search */
+
+.search-box {
+  display: flex;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  background: #111116;
+  border: 1px solid #333;
+  color: white;
+  padding: 13px;
+  border-radius: 8px;
+  outline: none;
+}
+
+.search-box button {
+  background: #ff6b00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0 24px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.search-box button:hover {
+  opacity: .9;
+}
+
+/* Cards */
+
+#constainerdish {
+  margin-top: 20px;
+}
+
+#constainerdish > p {
+  margin-bottom: 18px;
+  color: #9ca3af;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px,1fr));
+  gap: 24px;
+}
